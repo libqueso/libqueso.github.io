@@ -1,1 +1,140 @@
-Welcome to the QUESO website.
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="QUESO : A C++ library for the Quantification of Uncertainty for Estimation, Simulation and Optimization">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>QUESO</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/libqueso">View on GitHub</a>
+
+          <h1 id="project_title">QUESO</h1>
+          <h2 id="project_tagline">A C++ library for the Quantification of Uncertainty for Estimation, Simulation and Optimization</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="the-queso-library" class="anchor" href="#the-queso-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>The QUESO library</h2>
+
+<p><code>QUESO</code> stands for Quantification of Uncertainty for Estimation, Simulation and Optimization.</p>
+
+<p><code>QUESO</code> is a collection of algorithms for solving statistical inverse problems with quantified uncertainties, and is designed for flexibility, portability, usability and extensibility.  Its software design follows an object-oriented approach and its code is written in C++ over <code>MPI</code>, enabling the use of multiprocessor environments.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>You can obtain <code>QUESO</code> tarballs <a href="https://github.com/libqueso/queso/releases">here</a>.</p>
+
+<p>If you do not have a <code>configure</code> script in the top level directory, run <code>./bootstrap</code> to generate a configure script using <code>autotools</code>.  After this is done, <code>QUESO</code> may be installed in the 'usual' fashion as shown here:</p>
+
+<pre><code>$ ./configure
+$ make -j8  # Pass -j8 to use 8 processors to build queso
+$ make install
+</code></pre>
+
+<p>Additional options may be provided to the <code>configure</code> script if desired; run <code>./configure --help</code> for details.</p>
+
+<h3>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h3>
+
+<p><code>QUESO</code> documentation is available <a href="http://libqueso.github.io/queso/docs/html/">here</a>.</p>
+
+<h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<p>At a minimum, <code>QUESO</code> compilation requires <code>MPI</code> and linkage against two external libraries:</p>
+
+<ul>
+<li><a href="http://www.boost.org/">Boost</a></li>
+<li><a href="https://www.gnu.org/software/gsl/">GSL</a></li>
+</ul>
+
+<p><code>QUESO</code> also has several optional dependencies that enable additional functionality:</p>
+
+<ul>
+<li><a href="http://trilinos.sandia.gov/packages/docs/r7.0/packages/teuchos/doc/html/index.html">Teuchos</a></li>
+<li><a href="https://red.ices.utexas.edu/projects/hpct/files">GRVY</a></li>
+<li><a href="http://www.hdfgroup.org/HDF5/">HDF5</a></li>
+<li><a href="https://www.gnu.org/software/glpk/">GLPK</a></li>
+<li><a href="http://www.mcs.anl.gov/petsc/">PETSc</a></li>
+</ul>
+
+<p>Should you be interested in using the optional infinite dimensional capabilities of <code>QUESO</code>, then you also need the following dependencies:</p>
+
+<ul>
+<li>
+<a href="http://libmesh.sourceforge.net">libMesh</a> compiled with <a href="http://www.grycap.upv.es/slepc/">SLEPc</a>
+</li>
+<li><a href="http://www.hdfgroup.org/HDF5/">HDF5</a></li>
+</ul>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>See <a href="https://github.com/libqueso/queso/blob/dev/LICENSE"><code>LICENSE</code></a> file distributed with <code>QUESO</code> for more information.</p>
+
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>Contributions are very welcome.  If you wish to contribute, please take a few moments to review the <a href="http://nvie.com/posts/a-successful-git-branching-model/">branching model</a> <code>QUESO</code> utilizes.</p>
+
+<h3>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h3>
+
+<p>If you have questions or need help with using or contributing to <code>QUESO</code>, feel free to ask questions on one of the mailing lists:</p>
+
+<ul>
+<li>
+<a href="https://groups.google.com/forum/#!forum/queso-users">queso-users</a> mailing
+list for questions regarding usage and reporting bugs</li>
+<li>
+<a href="https://groups.google.com/forum/#!forum/queso-dev">queso-dev</a> mailing list
+for discussion regarding development of <code>QUESO</code>
+</li>
+</ul>
+
+<h3>
+<a id="citing-queso" class="anchor" href="#citing-queso" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citing QUESO</h3>
+
+<p>Please add the following citation to any paper, technical report or
+article describing the use of the <code>QUESO</code> library:</p>
+
+<pre lang="bibtex"><code>@inproceedings{Prudencio2012,
+  author = {Prudencio, Ernesto E and Schulz, Karl W},
+  booktitle = {Euro-Par 2011: Parallel Processing Workshops},
+  pages = {398--407},
+  publisher = {Springer},
+  title = {{The parallel C++ statistical library ‘QUESO’: Quantification of
+    Uncertainty for Estimation, Simulation and Optimization}},
+  url = {http://dx.doi.org/10.1007/978-3-642-29737-3\_44},
+  year = {2012}
+}
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
